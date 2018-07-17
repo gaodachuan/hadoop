@@ -36,19 +36,21 @@ services:
         image: gaodch/hadoop
         restart: always
         hostname: slave01
-        port:
+        ports:
             - "50075:50075" 
     jnnode02:
         container_name: slave02
         image: gaodch/hadoop
         restart: always
         hostname: slave02
+        ports:
            - "50076:50075"
     jnnode03:
         container_name: slave03
         image: gaodch/hadoop
         restart: always 
-        hostname: slave03  
+        hostname: slave03 
+        ports: 
            - "50077:50075" 
 # 启动一个namenode
     namenode01:
